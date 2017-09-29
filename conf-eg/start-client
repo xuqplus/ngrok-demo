@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -f ngrok ] ; then 
+cp ../ngrok/bin/ngrok .
+fi
+./ngrok -subdomain=lalala -config=client.conf 8080

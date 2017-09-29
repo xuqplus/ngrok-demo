@@ -7,8 +7,8 @@ rm -rf /var/ngrok/ngrok.log
 
 ps -ef|grep ngrok/bin/ngrokd|cut -c 9-15|xargs kill -9
 
-#COMMAND='ngrok/bin/ngrokd -domain=$NGROK_DOMAIN -httpAddr=:40080 -httpsAddr=:40443 -log=/var/ngrok/ngrok.log -log-level=ERROR -tunnelAddr=:44443 -tlsKey=./ngrok/assets/server/tls/snakeoil.key -tlsCrt=./ngrok/assets/server/tls/snakeoil.crt'
-COMMAND='ngrok/bin/ngrokd -domain=$NGROK_DOMAIN -httpAddr=:40080 -httpsAddr=:40443 -log=stdout -log-level=DEBUG -tunnelAddr=:44443 -tlsKey=./ngrok/assets/server/tls/snakeoil.key -tlsCrt=./ngrok/assets/server/tls/snakeoil.crt'
+#COMMAND='ngrok/bin/ngrokd -domain='$NGROK_DOMAIN' -httpAddr=:40080 -httpsAddr=:40443 -log=/var/ngrok/ngrok.log -log-level=ERROR -tunnelAddr=:44443 -tlsKey=./ngrok/assets/server/tls/snakeoil.key -tlsCrt=./ngrok/assets/server/tls/snakeoil.crt'
+COMMAND='ngrok/bin/ngrokd -domain='$NGROK_DOMAIN' -httpAddr=:40080 -httpsAddr=:40443 -log=stdout -log-level=DEBUG -tunnelAddr=:44443 -tlsKey=./ngrok/assets/server/tls/snakeoil.key -tlsCrt=./ngrok/assets/server/tls/snakeoil.crt'
 
 echo $COMMAND
 $COMMAND
