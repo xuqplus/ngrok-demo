@@ -22,3 +22,4 @@ rm -rf rootCA.pem rootCA.key rootCA.srl device.crt device.key device.csr
 
 cp src/in-docker-make ngrok/
 docker run --rm -v $(pwd)/ngrok:/root/work/ xuqplus/cent6-ngrok-go:0.3 /root/work/in-docker-make
+docker build -t xuqplus/ngrok:0.1 .
